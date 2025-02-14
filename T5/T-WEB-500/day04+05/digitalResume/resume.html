@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Fixari Lucas</title>
+</head> <!-- Style START-->
+<style>
+
+    .background-img {
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .greetings {
+        padding: 20px;
+        border-radius: 5px;
+        text-align: right;
+        font-size: 200%;
+        font-family: "Lato", sans-serif;
+        position: relative;
+        transition: bottom 0.4s ease;
+    }
+
+    .profile-img {
+        min-width: 50%;
+        max-width: 300%;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 5%;
+        right: 5%;
+        z-index: 0;
+        transition: bottom 0.4s ease;
+        }
+        
+    #tab-1 {
+        z-index: 3;
+        position: sticky;
+        background-color: #ffffff;
+        }
+        
+    #navigation {
+        z-index: 5;
+        position: sticky;
+        background-color: #ffffff;
+    }
+
+    #tab-2 {
+        z-index: 5;
+        background-color: #F0F1F1;
+        position: sticky;
+        }
+
+    .about-me {
+    font-size: 200%;
+    }
+
+    .experience-text {
+    font-size: 100%;
+    }
+
+    .tab-button {
+    font-size: 100%;
+    }
+
+    @media (max-width: 767px) {
+    .profile-img {
+        left: auto;
+        right: 5%;
+    }
+
+    .greetings {
+        font-size: 100%;
+    }
+
+    .experience-text {
+        font-size: 50%;
+    }
+
+    .about-me {
+        font-size: 100%;
+    }
+
+    .tab-button {
+        font-size: 50%;
+    }
+
+    }
+
+    .tabs .indicator {
+        background-color: #05b0db;
+        height: 4px;
+    }
+
+    .tabs .tab {
+        width: auto;
+    }
+
+    #navigation, #tab-1 #tab-2{
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .tabs .tab a{
+            color:#000000;
+        }
+
+        .tabs .tab a:hover {
+            background-color:#eeeeee;
+            color:#000000;
+        }
+
+        .tabs .tab a.active {
+            background-color:#888888;
+            color:#000000;
+        }
+
+        .tabs .indicator {
+            background-color:#05b0db;
+            left: 0%;
+            right: 75%;
+        }
+    
+    #experience-title{
+        background: linear-gradient(#5470B9, #639EB8);
+        border-radius : 5px;
+    }
+
+    #card-rounded{
+        border-radius : 10px;
+    }
+    
+    #center{
+        margin-top:20px;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(10);
+        }
+        50% {
+            transform: translateY(15%);
+        }
+    }
+
+    .animated-image {
+        animation: moveUpDown 4s ease-in-out infinite;
+    }
+
+</style>
+<body> <!-- Style END -->
+    <section class="background-img" id="tab-0"> <!-- Page START-->
+        <img class="profile-img" src="profile-picture.png" alt="Profile Picture">
+        <div class="container greetings row col s12">
+            <div class="col s6 offset-s6">
+                <div>
+                    <span style="color:#05b0db;font-weight:800">Hi there, my name is</span>
+                </div>
+                <span style="color:#e3e3e3;font-weight:800;font-size:300%">Lucas Fixari</span>
+                <div>
+                    and I am currently pursuing a <br><span style="color:#05b0db;font-weight:800">Pre-MSc Pro</span> program at <span style="color:#05b0db;font-weight:800">Epitech Strasbourg.</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="row z-depth-1" id="navigation">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#tab-0" class="tab-button">Home</a></li>
+            <li class="tab col s3"><a href="#tab-1" class="tab-button">About Me</a></li>
+            <li class="tab col s3"><a href="#tab-2" class="tab-button">Experience</a></li>
+            <li class="tab col s3"><a href="#tab-3" class="tab-button">Contact</a></li>
+            <li class="indicator"></li>
+        </ul>
+    </section>
+    <section id="tab-1"><br>
+        <div class="row">
+            <h2 class="center-align">About Me</h2>
+            <div class="col s2"></div>
+            <div class="card-content col s8 z-depth-1">
+                <p class="center-align about-me">
+                    For almost my entire life I have been intrigued by computers, how they work, how people do this or that. But I never had the courage to take the plunge into wanting to do tech for fear of not understanding anything.<br>In the end, at the age of 21, I decided to do what I really like, instead of doing what people wanted me to like.<br>And here I am in Pre-MSc Pro at Epitech Strasbourg in order to finally know how to deal with this whole world which was until then austere to me. I hope to see globally all the technologies that exist, or at least know that they exist.<br>So my goal is to become a Full-Stack developer in the future.
+                </p>
+            </div>
+        </div>
+        <div class="card-action center-align">
+            <div style="display: inline-block; margin-right: 20px;">
+                <a href="https://www.linkedin.com/in/lucas-fixari-3b0158292" target="_blank" style="background-color: #0A66C2;" class="waves-effect waves-light btn-large linkedin-btn">
+                    <i class="fab fa-linkedin left"></i>Connect on LinkedIn
+                </a>
+            </div>
+            <div style="display: inline-block;">
+                <a href="https://github.com/lfixas" target="_blank" style="background-color: #6cc644;" class="waves-effect waves-light btn-large github-btn">
+                    <i class="fab fa-github left"></i>Visit GitHub
+                </a>
+            </div>
+        </div>
+        <br>
+    </section>
+    <section id="tab-2"><br>
+    <div class="container">
+        <h2 class="center-align">Experience</h2>
+        <ul id="tabs-swipe-experience" class="tabs row">
+            <li class="tab col s3"><a href="#tab-experience-1"><i class="fa-solid fa-briefcase"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-2"><i class="fa-solid fa-briefcase"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-3"><i class="fa-solid fa-school"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-4"><i class="fa-solid fa-school"></i></a></li>
+        </ul>
+            <div class="tabs-content carousel carousel-slider">
+                <div id="tab-experience-1" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Job</h5>
+                                <p>McDonald's<br>Since November 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Versatile team member, mainly in the kitchen or closing the
+                        restaurant.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Versatile team member, mainly in the kitchen or closing the
+                            restaurant.</span>
+                        <p class="experience-text">As a versatile team member, primarily focusing on tasks in the kitchen and taking charge of the restaurant's closing procedures. In this multifaceted role, I bring my expertise to the heart of our culinary operations, to ensuring a seamless dining experience for our valued customers. Additionally, I take on the responsibility of ensuring that the restaurant is properly closed at the end of each day, which involves tasks such as cleaning, inventory management, and securing the premises. My dedication to both kitchen excellence and restaurant closure efficiency is a testament to my commitment to the overall success of the establishment.</p><br>
+                    </div>
+                </div>   
+                <div id="tab-experience-2" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Seasonal</h5>
+                                <p>Super U<br>July 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Preparation and shelving of department items, particularly bakery and pastries. Providing assistance and support to customers.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Preparation and shelving of department items, particularly bakery and pastries. Providing assistance and support to customers.</span>
+                        <p class="experience-text">This role primarily encompasses the preparation and presentation of bakery and pastry items while also involving customer engagement. It entails tasks such as baking and arranging products for display, ensuring their availability and appealing presentation. Additionally, it includes assisting customers by answering their inquiries and guiding them in their selections, contributing to a positive shopping experience.</p><br>
+                    </div>
+                </div>
+                <div id="tab-experience-3" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Stage</h5>
+                                <p>Cabinet CARBIENER Thierry<br>June 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Monitoring of the branches of the surveyor profession.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Monitoring of the branches of the surveyor profession.</span>
+                        <p class="experience-text">Monitoring various aspects of the surveyor profession, this role involves maintaining a global perspective. It encompasses tasks ranging from researching old topographical plans to conducting fieldwork and creating data using specialized software.</p>
+                    </div>
+                </div>
+                <div id="tab-experience-4" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Stage</h5>
+                                <p>EMS Concept<br>June 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Managing inventory and procuring materials for personal workspaces.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Managing inventory and procuring materials for personal workspaces.</span>
+                        <p class="experience-text">In the context of workplace organization and resource management, the task at hand involves inventory management and the efficient procurement of essential materials required for individual workspaces. This process encompasses the careful tracking and control of available resources, as well as the timely acquisition of necessary supplies to ensure that workspaces remain well-equipped and conducive to productivity.</p>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="center-align">Skills</h2>
+        <div class="container">
+            <ul class="collapsible popout">
+                <li>
+                    <div class="collapsible-header">
+                        <span>
+                            <i class="fa-brands fa-python"></i>
+                            Python
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced+</b><br>The first one I learn, it can do anything.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span>
+                            <i class="fa-solid fa-terminal"></i>
+                            Arduino
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>The Basics</b><br>Open-source electronics platform, perfect for Projects.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i>
+                            HTML/CSS
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced</b><br>Web creation and styling languages. The ones I learn right now.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-solid fa-code"></i>
+                            C++
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Children</b><br>Only touch that one time for a little project. General-purpose programming language.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-brands fa-java"></i>
+                            Java
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                        <b>Children</b><br>Only a little bit. Object-oriented programming language.
+                    </p>
+                    </div>
+                </li>
+                <br>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <section id="tab-3"><br>
+        <h1 style="margin-bottom: 2em;" class="center-align">Let's Connect</h1>
+        <div class="row">
+            <div class="col s5"></div>
+        <img id="my-image" class="circle responsive-img col s2 animated-image" width="2px" src="https://media.discordapp.net/attachments/403118210561343489/1156588768208375868/picture_image.png?ex=651584ba&is=6514333a&hm=dba1e44714eda76cf792451f6021863636561c3368257cfad5af19625c5c77c6&">
+        <div class="col s5"></div>
+    </div>
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="card center-align col s6">
+                <h1 style="font-size: 1.5em; margin-bottom: 0px;"><b>Lucas Fixari</b></h1>
+                <p>
+                    Thanks for visiting! Send a connection request on <a href="https://www.linkedin.com/in/lucas-fixari-3b0158292" title="Lucas Fixari" style="text-decoration:underline">LinkedIn</a> or let's connect over any other way!
+                </p>
+                <div class="row">
+                    <div class="col s12" style="display: inline-block; margin-bottom:2%;">
+                        <a href="https://www.linkedin.com/in/lucas-fixari-3b0158292" target="_blank" style="background-color: #0A66C2;" class="waves-effect waves-light btn-large linkedin-btn">
+                            <i class="fab fa-linkedin left"></i>Connect on LinkedIn
+                        </a>
+                    </div>
+                    <div class="col s12" style="display: inline-block; margin-bottom:2%;">
+                        <a href="https://github.com/lfixas" target="_blank" style="background-color: #6cc644;" class="waves-effect waves-light btn-large github-btn">
+                            <i class="fab fa-github left"></i>Visit GitHub
+                        </a>
+                    </div>
+                    <div class="col s12" style="display: inline-block;">
+                        <a href="mailto:lucasfixari67@gmail.com" style="background-color: #FF5722;" class="waves-effect waves-light btn-large email-btn">
+                            <i class="fas fa-envelope left"></i>Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Page END-->
+<!-- Script START-->
+<script>
+    const profileImg = document.querySelector(".profile-img");
+    const greetings = document.querySelector(".greetings");
+    const tabs = document.querySelectorAll(".tabs .tab");
+    const myImage = document.getElementById("my-image");
+
+    window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const newBottomProfile = - scrollPosition / 10;
+    const newBottomGreet = - scrollPosition / 5;
+    profileImg.style.bottom = `${newBottomProfile}px`;
+    greetings.style.bottom = `${newBottomGreet}px`;
+    
+});
+
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            const indicator = document.querySelector(".tabs .indicator");
+            const left = index * 25;
+            const right = 100 - (index + 1) * 25;
+            indicator.style.left = left + "%";
+            indicator.style.right = right + "%";
+        });
+});
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const swipeableTabs = document.querySelector('#tabs-swipe-experience');
+            M.Tabs.init(swipeableTabs, { swipeable: true });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+
+function randomlyChangeImage() {
+    const randomValue = Math.random();
+
+    if (randomValue < 0.2) {
+        myImage.src = "https://minecraft.wiki/images/thumb/Grass_Block.png/150px-Grass_Block.png?a10cd";
+        myImage.classList.remove("circle");
+    }
+}
+
+function secretImageClick() {
+        const duration = 1000;
+
+        const startScrollY = window.scrollY;
+
+        const distance = -startScrollY;
+
+        const startTime = performance.now();
+
+        function scrollAnimation(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const scrollFraction = elapsedTime / duration;
+
+            if (scrollFraction < 1) {
+                window.scrollTo(0, startScrollY + distance * scrollFraction);
+                requestAnimationFrame(scrollAnimation);
+            } else {
+                window.scrollTo(0, 0);
+
+                setTimeout(function () {
+                    window.location.href = "second-resume.html";
+                }, 500);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    }
+
+randomlyChangeImage();
+
+myImage.addEventListener("click", secretImageClick);
+</script>
+</body> <!-- Script END -->
+</html>

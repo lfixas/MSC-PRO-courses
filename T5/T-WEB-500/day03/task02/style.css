@@ -1,0 +1,21 @@
+header {
+    background-color: #67B3DD;
+}
+
+.section{
+    background-color: #9EE062;
+}
+
+article{
+    background-color: #FEDF6B;
+}
+
+footer {
+    text-align: center;
+    background-color: #FC302D;
+}
+/* Pour respecter strictement la consigne */
+.hide { 
+    display: none;
+}
+  

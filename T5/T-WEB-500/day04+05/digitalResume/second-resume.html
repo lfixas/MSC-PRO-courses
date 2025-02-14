@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>EverydaySun</title>
+</head> <!-- Style START-->
+<style>
+
+    .background-img {
+        background-image: url('background1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .greetings {
+        padding: 20px;
+        border-radius: 5px;
+        text-align: right;
+        font-size: 200%;
+        font-family: "Lato", sans-serif;
+        position: relative;
+        transition: bottom 0.4s ease;
+    }
+
+    .profile-img {
+        min-width: 50%;
+        max-width: 300%;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 5%;
+        right: 5%;
+        z-index: 0;
+        transition: bottom 0.4s ease;
+        }
+        
+    #tab-1 {
+        z-index: 3;
+        position: sticky;
+        background-color: #ffffff;
+        }
+        
+    #navigation {
+        z-index: 5;
+        position: sticky;
+        background-color: #ffffff;
+    }
+
+    #tab-2 {
+        z-index: 5;
+        background-color: #F0F1F1;
+        position: sticky;
+        }
+
+    .about-me {
+    font-size: 200%;
+    }
+
+    .experience-text {
+    font-size: 100%;
+    }
+
+    .tab-button {
+    font-size: 100%;
+    }
+
+    @media (max-width: 767px) {
+    .profile-img {
+        left: auto;
+        right: 5%;
+    }
+
+    .greetings {
+        font-size: 100%;
+    }
+
+    .experience-text {
+        font-size: 50%;
+    }
+
+    .about-me {
+        font-size: 100%;
+    }
+
+    .tab-button {
+        font-size: 50%;
+    }
+
+    }
+
+    .tabs .indicator {
+        background-color: #05b0db;
+        height: 4px;
+    }
+
+    .tabs .tab {
+        width: auto;
+    }
+
+    #navigation, #tab-1 #tab-2{
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .tabs .tab a{
+            color:#000000;
+        }
+
+        .tabs .tab a:hover {
+            background-color:#eeeeee;
+            color:#000000;
+        }
+
+        .tabs .tab a.active {
+            background-color:#888888;
+            color:#000000;
+        }
+
+        .tabs .indicator {
+            background-color:#55FF55;
+            left: 0%;
+            right: 75%;
+        }
+    
+    #experience-title{
+        background: linear-gradient(#00FF00, #55FF55);
+        border-radius : 5px;
+    }
+
+    #card-rounded{
+        border-radius : 10px;
+    }
+    
+    #center{
+        margin-top:20px;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(10);
+        }
+        50% {
+            transform: translateY(15%);
+        }
+    }
+
+    .animated-image {
+        animation: moveUpDown 4s ease-in-out infinite;
+    }
+
+</style>
+<body> <!-- Style END -->
+    <section class="background-img" id="tab-0"> <!-- Page START-->
+        <img class="profile-img" src="profile-picture1.png" alt="Profile Picture">
+        <div class="container greetings row col s12">
+            <div class="col s6 offset-s6">
+                <div>
+                    <span style="color:#55FF55;font-weight:800">Hi there, my name is</span>
+                </div>
+                <span style="color:#FFAA00;font-weight:800;font-size:200%">Everyday Sun</span>
+                <div style="color:#FFFFFF">
+                    and I am a <br><span style="color:#00AA00;font-weight:800">Minecraft</span> player and admin of <span style="color:#55FFFF;font-weight:800">Hytelia.</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="row z-depth-1" id="navigation">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#tab-0" class="tab-button">Home</a></li>
+            <li class="tab col s3"><a href="#tab-1" class="tab-button">About Me</a></li>
+            <li class="tab col s3"><a href="#tab-2" class="tab-button">Experience</a></li>
+            <li class="tab col s3"><a href="#tab-3" class="tab-button">Contact</a></li>
+            <li class="indicator"></li>
+        </ul>
+    </section>
+    <section id="tab-1"><br>
+        <div class="row">
+            <h2 class="center-align">About Me</h2>
+            <div class="col s2"></div>
+            <div class="card-content col s8 z-depth-1">
+                <p class="center-align about-me">
+                    I discovered Minecraft in 2009 while searching the internet for something like 'a first-person game similar to Penguin Club.' I stumbled upon a gameplay video where two people were building a castle and using an infinite lava source to illuminate the walls of a tunnel (a very precise but accurate memory). I initially played the cracked version of the game and introduced it to around 80% of my schoolmates at the time, considering that Minecraft was not widely known.<br>After creating several dozen houses in solo mode and losing them during explorations, I realized that the only solution was to start anew. Around 2013, I ventured into multiplayer gameplay. While I had tried various types of servers, I found a particular fondness for semi-roleplay (semi-rp) servers. These servers allowed me to engage in a wide range of activities, from building to redstone contraptions to resource farming—everything I loved.<br>Fast forward to today, and I still have a deep affection for this game. I continue to embark on new projects and explore the vast possibilities within Minecraft, always learning more about its intricacies.
+                </p>
+            </div>
+        </div>
+        <div class="card-action center-align">
+            <div class="col s12" style="display: inline-block; margin-bottom: 2%;">
+                <a href="https://discord.com/users/396353379284025345" target="_blank" style="background-color: #7289DA;" class="waves-effect waves-light btn-large discord-btn">
+                    <i class="fab fa-discord left"></i>Chat on Discord
+                </a>
+            </div>
+        </div>
+        <br>
+    </section>
+    <section id="tab-2"><br>
+    <div class="container">
+        <h2 class="center-align">Experience</h2>
+        <ul id="tabs-swipe-experience" class="tabs row">
+            <li class="tab col s3"><a href="#tab-experience-1"><i class="fa-solid fa-user-shield"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-2"><i class="fa-solid fa-user-shield"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-3"><i class="fa-solid fa-user-shield"></i></a></li>
+            <li class="tab col s3"><a href="#tab-experience-4"><i class="fa-solid fa-user-shield"></i></a></li>
+        </ul>
+            <div class="tabs-content carousel carousel-slider">
+                <div id="tab-experience-1" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Administrator</h5>
+                                <p>Hytelia<br>Since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Manages the progress and future of the Hytelia server with the two founders.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Manages the progress and future of the Hytelia server with the two founders.</span>
+                        <p class="experience-text">Manages the creation of Datapacks, the configuration of plugins, the creation of resource packs with custom textures and custom mobs. Reflecting on gameplay, setting up quests and creating an automatic quest creation script.</p><br>
+                    </div>
+                </div>   
+                <div id="tab-experience-2" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Moderator/Event host/Builder</h5>
+                                <p>TopCraft<br>2017-2019</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Pretty much done everything until I was stopped from becoming an administrator.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Pretty much done everything until I was stopped from becoming an administrator.</span>
+                        <p class="experience-text">Player for 5 months, then helper for 6 months, then moderator, and then event host, something in that order, then wanted to be admin, but it didn't happen without a particularly justified reason. Otherwise as staff I did events, managed the right environment for the players and tried to develop the server.</p><br>
+                    </div>
+                </div>
+                <div id="tab-experience-3" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Moderator</h5>
+                                <p>Durycraft<br>2016</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Moderator on the staff and still mayor of the medieval town of Erthilia.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Moderator on the staff and still mayor of the medieval town of Erthilia.</span>
+                        <p class="experience-text">I actively fulfill the role of a moderator on our dedicated staff team, where I am responsible for ensuring a positive and respectful gaming environment. Simultaneously, I proudly retain the position of mayor within a captivating medieval town. This dual role allows me to contribute both to the smooth operation the community and the continued growth and development of a town. It's a rewarding experience that combines my passion for community management and my love for medieval-themed.</p>
+                    </div>
+                </div>
+                <div id="tab-experience-4" class="card" style="overflow: visible;">
+                    <div class="card-title white-text row z-depth-1" id="experience-title">
+                        <div class="row">
+                            <div class="col s7">
+                                <h5>Event host</h5>
+                                <p>Quebecraft<br>2014</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="fa-solid fa-ellipsis-vertical right"></i>Hosting recurring events and serving as the mayor of Salama, a desert town.</span>
+                </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4"><i class="fa-solid fa-xmark right"></i>Hosting recurring events and serving as the mayor of Salama, a desert town.</span>
+                        <p class="experience-text">I have experience managing recurring events as an event host, where I've organized and overseen various in-game activities, tournaments, and challenges to enhance the gaming experience for players. Additionally, I've taken on the role of mayor in the city of Salama, situated within a desert landscape. These experiences have allowed me to cultivate strong leadership, organizational, and creative skills while fostering a sense of community within the Minecraft gaming world.</p>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="center-align">Skills</h2>
+        <div class="container">
+            <ul class="collapsible popout">
+                <li>
+                    <div class="collapsible-header">
+                        <span>
+                            <i class="fa-solid fa-terminal"></i>
+                            Command block
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced+</b><br>Can do almost anything using command block.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span>
+                            <i class="fa-solid fa-file"></i>
+                            Datapack
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced+</b><br>Can do almost anything using datapack, perfect for big projects.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-solid fa-image"></i>
+                            Ressource pack
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced</b><br>I learned to use and do lots of things using the resource pack.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-solid fa-microchip"></i>
+                            Redstone
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                            <b>Advanced</b><br>I learned redstone thanks to aypierre or Labocraft's tnt cannons. I know a lot about it and how it works.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <span><i class="fa-solid fa-house"></i>
+                            Building
+                        </span>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                        <b>Advanced</b><br>At one time I could be considered good, having learned from the best like Bob Lennon or Aurelien Sama, but as the build evolves really quickly, I am content to do a more realistic style. I also master WorldEdit quite well.
+                    </p>
+                    </div>
+                </li>
+                <br>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <section id="tab-3"><br>
+        <h1 style="margin-bottom: 2em;" class="center-align">Let's Connect</h1>
+        <div class="row">
+            <div class="col s5"></div>
+        <img class="circle responsive-img col s2 animated-image" width="2px" src="https://s.namemc.com/2d/skin/face.png?id=f7ded1664b9f80ed&scale=10">
+        <div class="col s5"></div>
+    </div>
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="card center-align col s6">
+                <h1 style="font-size: 1.5em; margin-bottom: 0px;"><b>EverydaySun</b></h1>
+                <p>
+                    Thanks for visiting! Send a connection request on <a href="https://discord.com/users/396353379284025345" title="EverydaySun" style="text-decoration:underline">Discord</a>!
+                </p>
+                <div class="row">
+                    <div class="col s12" style="display: inline-block; margin-bottom: 2%;">
+                        <a href="https://discord.com/users/396353379284025345" target="_blank" style="background-color: #7289DA;" class="waves-effect waves-light btn-large discord-btn">
+                            <i class="fab fa-discord left"></i>Chat on Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Page END-->
+<!-- Script START-->
+<script>
+    const profileImg = document.querySelector(".profile-img");
+    const greetings = document.querySelector(".greetings");
+    const tabs = document.querySelectorAll(".tabs .tab");
+
+    window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const newBottomProfile = - scrollPosition / 10;
+    const newBottomGreet = - scrollPosition / 5;
+    profileImg.style.bottom = `${newBottomProfile}px`;
+    greetings.style.bottom = `${newBottomGreet}px`;
+    
+});
+
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            const indicator = document.querySelector(".tabs .indicator");
+            const left = index * 25;
+            const right = 100 - (index + 1) * 25;
+            indicator.style.left = left + "%";
+            indicator.style.right = right + "%";
+        });
+});
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const swipeableTabs = document.querySelector('#tabs-swipe-experience');
+            M.Tabs.init(swipeableTabs, { swipeable: true });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+</script>
+</body> <!-- Script END -->
+</html>
