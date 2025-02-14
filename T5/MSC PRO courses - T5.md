@@ -5,7 +5,7 @@
 # MSC PRO courses - T5
 
 - [MSC PRO courses - T5](#msc-pro-courses---t5)
-  - [BizDays - Business \& Communication](#bizdays---business--communication)
+  - [T-BIZ-500 BizDays - Business \& Communication](#t-biz-500-bizdays---business--communication)
     - [Day 01](#day-01)
     - [Day 02](#day-02)
   - [T-CEN-500 Project Management](#t-cen-500-project-management)
@@ -77,7 +77,7 @@
 
 ---
 
-## BizDays - Business & Communication
+## T-BIZ-500 BizDays - Business & Communication
 
 ### Day 01
 > Day 01 is mainly devoted to communication.
