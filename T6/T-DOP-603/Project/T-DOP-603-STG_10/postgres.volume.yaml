@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: postgres-claim
+  namespace: default
+  labels:
+    app: postgres
+    type: local
+spec: 
+  storageClassName: manual
+  accessModes: 
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: "/var/lib/postgresql/data"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: 
+  name: postgres-claim
+  namespace: default
+  labels:
+    app: postgres
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
