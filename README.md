@@ -37,3 +37,8 @@ This README provides an overview of the **MSC PRO courses** offered. Please refe
   - [T-DOP-603 Bernstein](T6/MSC%20PRO%20courses%20-%20T6.md#t-dop-603-bernstein)
   - [T-YEP-600 Final Project](T6/MSC%20PRO%20courses%20-%20T6.md#t-yep-600-final-project)
   - [T-PRO-600 Part-time job](T6/MSC%20PRO%20courses%20-%20T6.md#t-pro-600-part-time-job)
+- [T7](T7/MSC%20PRO%20courses%20-%20T7.md)
+  - [T-POO-700 Time Manager](T7/MSC%20PRO%20courses%20-%20T7.md#t-poo-700-time-manager)
+  - [T-DIT-700 Jack the Ripeur](T7/MSC%20PRO%20courses%20-%20T7.md#t-dit-700-jack-the-ripeur)
+  - [T-DEV-700 Trinity](T7/MSC%20PRO%20courses%20-%20T7.md#t-dev-700-trinity)
+  - [T-ESP-700 End of study project](T7/MSC%20PRO%20courses%20-%20T7.md#t-esp-700-end-of-study-project)
